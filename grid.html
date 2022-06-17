@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --bright_orange: hsl(31, 77%, 52%);
+            --light_cyan: hsl(184, 100%, 22%);
+            --dark_cyan: hsl(179, 100%, 13%);
+            --text: hsla(0, 0%, 100%, 0.75);
+            --bg:hsl(0, 0%, 95%);
+        }
+        *,*::after,*::before{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            width:100%;
+            min-height:100vh;
+            background:var(--bg);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+          max-width:1000px;
+          width:100%;
+          display:grid;
+          grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+        }
+        .container .card{
+            background-color: var(--bright_orange);
+            padding:40px;
+        }
+        .container .card:first-child{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .container .card:nth-child(2){
+            background-color: var(--light_cyan);
+        }
+        .container .card:nth-child(3){
+            background-color: var(--dark_cyan);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .container .card h1{
+            margin:20px 0;
+            text-transform: uppercase;
+            color:var(--bg);
+            font-size:20px;
+            font-family: "Big Shadow Display";
+            font-weight: 700;
+        }
+        .container .card .desc{
+            font-size: 15px;
+            color:var(--bg);
+            font-family: "Lexend Deca";
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom:50px;
+        }
+        .container .card button{
+            background-color: var(--bg);
+            border:none;
+            padding:10px 20px;
+            border-radius: 20px;
+            border:1px solid var(--bg);
+            transition: all .5s;
+            color:var(--bright_orange);
+        }
+        
+        .container .card:nth-child(2) button{
+           color: var(--light_cyan);
+        }
+        .container .card:nth-child(3) button{
+           color: var(--dark_cyan);
+        }
+        .container .card:hover button{
+            background-color: transparent;
+            color:#fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="images/icon-sedans.svg" alt="">
+            <h1>sedans</h1>
+            <div class="desc">
+                choose a sedan fo its affordability and excellent fuel economy.Ideal for cruising  in the city
+                or on your next road trip
+            </div>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <img src="images/icon-suvs.svg" alt="">
+            <h1>suvs</h1>
+            <div class="desc">
+                Take an SUV for its spacious interior, power and versatility. Perfect for next
+                family vacation and off-road adventures.
+            </div>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <img src="images/icon-luxury.svg" alt="">
+            <h1>luxury</h1>
+            <div class="desc">
+                Cruise in the best car brands without the bloated prices.Enjoy the enhanced comfort of a luxury rental and arrive in styles.
+            </div>
+            <button>Learn More</button>
+        </div>
+    </div>
+</body>
+</html>
